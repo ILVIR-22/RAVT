@@ -1,0 +1,208 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+}
+#bell {
+    font-family: 'Roboto-400';
+    font-size: 25px;
+    line-height: 29px;
+}
+.close-up {    
+    fill:#F8B500; 
+    transition: 0.3s;
+
+}
+.close-up:hover {  
+    cursor: pointer;  
+    fill:#000000;
+}
+.popup-visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.popup-main {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);    
+    width: 468px;
+    position: relative;
+}
+.popup-close {
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.popup-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 30px 54px;
+}
+.popup-block__title {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 29px;
+}
+.popup-block__item {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    padding: 23px 0 5px 0;
+    /* border-bottom: 1px solid #ff00d4; */
+    margin-top: 5px;
+  
+}
+.popup-block__item-input { 
+    height: 59px;
+    width: 100%;
+    background: transparent;
+    font-family: 'Gilroy-400';
+    font-size: 18px;
+    line-height: 27px;
+    color: #323232;     
+    padding: 29px 0 0 19px;  
+    border-bottom: 1px solid #676767;  
+}
+#placeholder::placeholder { 
+    color: #000000;
+    font-family: 'Roboto-500';
+    font-size: 14px;
+    line-height: 16px;    
+   }
+#mes {
+    height: 152px;   
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    resize: none;    
+}
+.popup-block__item-label {
+    width: 100%;   
+    position: absolute;
+    pointer-events: none;
+    left: -18px;
+    padding: 7px 0 36px 19px;   
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    font-family: 'Gilroy-400';
+    font-size: 18px;
+    line-height: 150%;
+    color: #5B5B5B;
+}
+.block-form__footer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 70px; */
+}
+.popup-block__polit {
+    font-family: 'Gilroy-400';
+    margin-left: 0px;  
+    font-size: 14px;
+    line-height: 125%;   
+    letter-spacing: 0.02em;
+    color: #323232;        
+}
+.popup-block__polit span a {
+    text-decoration: underline;
+    color: #1095BF; 
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;  
+}
+.popup-block__polit span a:hover {
+    cursor: pointer;
+    text-decoration: none;  
+}
+.btn-green  {
+    font-family: 'Gilroy-600';
+    width: 39%;
+    padding: 25px 0;   
+    text-align: center;   
+    font-size: 20px;
+    line-height: 23px;
+    background: #EBB600; 
+    border-radius: 35px; 
+    color: #fff;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;   
+    text-decoration: none;
+}
+.btn-green:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.popup-block__btn {    
+ 
+}
+.popup-block__item-input:focus~.popup-block__item-label,
+.popup-block__item-input:not(:focus):valid~.popup-block__item-label {
+    bottom: 3px;
+    font-size: 14px
+}
+.popup-block__item-label-mes {
+    font-family: 'Roboto-400';
+    width: 100%;   
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    padding: 7px 0 36px 19px;   
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    color: #B7B7B7;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.popup-block__item-input:focus~.popup-block__item-label-mes,
+.popup-block__item-input:not(:focus):valid~.popup-block__item-label-mes {
+    top: calc(100% - 90%);
+    font-size: 14px
+}
+#close {
+    font-family: 'Roboto-400';
+    font-size: 20px;
+    line-height: 23px;
+}
+@media (max-width: 992px) {
+    .popup-block__item {        
+        padding: 0px 0 5px 0;        
+    }
+    .btn-green {       
+        padding: 14px 0;        
+        font-size: 14px;       
+    }
+    .popup-block__btn {
+        margin-top: 27px;      
+    }
+    .popup-block__item-label {        
+        font-size: 14px;        
+    }
+   
+}

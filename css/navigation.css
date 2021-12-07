@@ -1,0 +1,135 @@
+.navigation01 {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    display: none; 
+
+}
+.nav-active {
+    background: #f0feff;        
+    background: -webkit-linear-gradient(left, #f0feff, #538a9d, #f0feff);
+    background: linear-gradient(to right, #f0feff, #538a9d, #f0feff);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 103;  
+    display: block;    
+    animation-name: show-left; 
+    animation-duration: 1s;   
+}
+@keyframes show-left {
+    0% {
+        opacity: 0;
+        top: -93px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+.navigation-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;       
+                           
+}
+.header-log {
+    width: 16.2%;
+    margin: 10px 0 10px 0;
+   
+}
+.menu {
+    width: 69%;
+    
+}
+.navigation-container {   
+    display: flex;    
+    justify-content: space-evenly;    
+}
+.header-navigation__text-right01 {
+    font-family: 'Gilroy-500';
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    transition: 0.3s;
+}
+.header-navigation__text-right01:hover {
+    cursor: pointer;
+    color: #EBB600;
+}
+.header-contacts__val01 {
+    width: 14.6%;    
+    margin-bottom: 2px;
+    font-family: 'Gilroy-700';
+    font-size: 24px;
+    line-height: 30px;
+    text-align: right; 
+}
+.header-contacts__val01 a {
+    color: #000000;
+    transition: 0.3s;
+}
+.header-contacts__val01 a:hover {
+    cursor: pointer;
+    color: #EBB600;
+}
+.header-burger,
+.header-phone {
+    display: none;
+}
+
+@media (max-width: 1460px) {
+    .header-log img {
+        padding-left: 10px;
+    }
+    .header-contacts__val01 {       
+        font-size: 22px;   
+        padding-right: 10px;
+        text-align: center;
+    }
+    
+}
+@media (max-width: 1360px) {
+    .header-contacts__val01{       
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+}
+@media (max-width: 1200px) {
+    .header-contacts__val01{       
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .header-log img {     
+        width: 80%;
+       
+          
+    }
+}
+@media (max-width: 992px) {
+    .header-contacts__val01 {
+        font-size: 15px;  
+        text-align: center;     
+    }
+}
+
+@media (max-width: 767px) {        
+    .navigation01 {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 100;
+        display: none;     
+    }
+    .header-burger,
+    .header-phone {
+        display: block;
+}
+}
